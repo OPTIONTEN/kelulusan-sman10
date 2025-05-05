@@ -104,21 +104,24 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
     >
       {/* Day */}
       <motion.div variants={item}>
-        <Input
-          ref={(el) => (inputRefs.current[0] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
-          value={dateValues[0]}
-          onChange={(e) => handleChange(0, e.target.value)}
-          onKeyDown={(e) => handleKeyDown(0, e)}
-          maxLength={1}
-          inputMode="numeric"
-          aria-label="Day digit 1"
-        />
+      <Input
+  ref={(el) => {
+    inputRefs.current[0] = el;
+  }}
+  className="h-10 w-10 md:h-12 md:w-12 text-center text-base md:text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+  value={dateValues[0]}
+  onChange={(e) => handleChange(0, e.target.value)}
+  onKeyDown={(e) => handleKeyDown(0, e)}
+  maxLength={1}
+  inputMode="numeric"
+  aria-label="Day digit 1"
+/>
+
       </motion.div>
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[1] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[1]}
           onChange={(e) => handleChange(1, e.target.value)}
           onKeyDown={(e) => handleKeyDown(1, e)}
@@ -136,7 +139,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[2] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[2]}
           onChange={(e) => handleChange(2, e.target.value)}
           onKeyDown={(e) => handleKeyDown(2, e)}
@@ -148,7 +151,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[3] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[3]}
           onChange={(e) => handleChange(3, e.target.value)}
           onKeyDown={(e) => handleKeyDown(3, e)}
@@ -166,7 +169,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[4] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[4]}
           onChange={(e) => handleChange(4, e.target.value)}
           onKeyDown={(e) => handleKeyDown(4, e)}
@@ -178,7 +181,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[5] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[5]}
           onChange={(e) => handleChange(5, e.target.value)}
           onKeyDown={(e) => handleKeyDown(5, e)}
@@ -190,7 +193,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[6] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[6]}
           onChange={(e) => handleChange(6, e.target.value)}
           onKeyDown={(e) => handleKeyDown(6, e)}
@@ -202,7 +205,7 @@ export default function DateInputOTP({ onChange }: DateInputOTPProps) {
       <motion.div variants={item}>
         <Input
           ref={(el) => (inputRefs.current[7] = el)}
-          className="h-12 w-12 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
+          className="md:h-12 h-8 md:w-12 w-8 text-center text-lg border-blue-200 focus:border-blue-400 focus:ring-blue-400 transition-all duration-200"
           value={dateValues[7]}
           onChange={(e) => handleChange(7, e.target.value)}
           onKeyDown={(e) => handleKeyDown(7, e)}

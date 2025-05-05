@@ -8,7 +8,7 @@ export default async function AnnouncementPage({ params }: { params: { nisn: str
   const student = await getStudentData(params.nisn)
 
   if (!student) {
-    redirect("/")
+    redirect("/")   
   }
 
   const isPassed = student.status === "LULUS"

@@ -50,7 +50,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-md rounded-lg bg-white p-8 shadow-xl"
+        className="md:w-fit w-96 rounded-lg bg-white p-8 shadow-xl"
       >
         {showCountdown ? (
           <CountdownTimer targetDate={announcementDate} onComplete={() => setShowCountdown(false)} />

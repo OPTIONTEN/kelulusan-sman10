@@ -1,14 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { validateStudent } from "@/app/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import DateInputOTP from "./date-input-otp"
 import { motion } from "framer-motion"
 
 export default function LoginForm() {
@@ -42,6 +40,19 @@ export default function LoginForm() {
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/[^0-9]/g, "") // Hapus karakter non-numerik
+
+    // Menambahkan strip setelah 2 digit, 2 digit, dan 4 digit
+    if (value.length > 2 && value.length <= 4) {
+      value = `${value.slice(0, 2)}-${value.slice(2)}`
+    } else if (value.length > 4) {
+      value = `${value.slice(0, 2)}-${value.slice(2, 4)}-${value.slice(4, 8)}`
+    }
+
+    setDateOfBirth(value)
   }
 
   const container = {
@@ -85,7 +96,18 @@ export default function LoginForm() {
           <Label htmlFor="dob" className="text-blue-800">
             Tanggal Lahir (DD-MM-YYYY)
           </Label>
-          <DateInputOTP onChange={setDateOfBirth} />
+          <Input
+            id="dob"
+            placeholder="Contoh: 28-07-2007"
+            value={dateOfBirth}
+            onChange={handleDateChange}
+            onInput={handleDateChange}
+            pattern="\d{2}-\d{2}-\d{4}"
+            maxLength={10}
+            inputMode="numeric"
+            required
+            className="h-12 border-blue-200 focus:border-blue-400 focus:ring-blue-400"
+          />
           <p className="text-xs text-gray-500">Format: Tanggal-Bulan-Tahun (contoh: 28-07-2007)</p>
         </motion.div>
 
