@@ -23,7 +23,6 @@ export default function LoginForm() {
       setError("NISN dan Tanggal Lahir harus diisi")
       return
     }
-
     setLoading(true)
     setError("")
 
@@ -32,6 +31,11 @@ export default function LoginForm() {
 
       if (result.success) {
         router.push(`/announcement/${nisn}`)
+      } else if (result.error) {
+        setError(result.error)
+        if (result.error === "Invalid NISN") {
+          setError("NISN tidak terdaftar")
+        }
       } else {
         setError("NISN atau Tanggal Lahir tidak valid")
       }
