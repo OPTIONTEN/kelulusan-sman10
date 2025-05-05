@@ -63,7 +63,7 @@ export default function CountdownTimer({ targetDate, onComplete }: CountdownTime
         transition={{ duration: 0.6 }}
         className="mb-8"
       >
-        <h1 className="mb-3 text-3xl font-bold text-blue-700">🎓 Pengumuman Kelulusan SMA Tahun 2025 🎓</h1>
+        <h1 className="mb-3 text-3xl font-bold text-blue-700">🎓 Pengumuman Kelulusan SMAN 10 BEKASI Tahun 2025 🎓</h1>
         <p className="text-lg text-gray-700">Hasil kelulusan akan tersedia dalam:</p>
       </motion.div>
 
