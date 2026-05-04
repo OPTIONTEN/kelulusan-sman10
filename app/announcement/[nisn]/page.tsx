@@ -20,7 +20,7 @@ export default async function AnnouncementPage({ params }: { params: { nisn: str
       <div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-xl">
         <div className="mb-6 text-center">
           <h1 className="mb-2 text-3xl font-bold text-blue-700">🎓 Pengumuman Kelulusan 🎓</h1>
-          <p className="text-gray-600">SMA Tahun 2025</p>
+          <p className="text-gray-600">SMA Tahun 2026</p>
         </div>
 
         <div className="mb-8 overflow-hidden rounded-lg border shadow-md">
@@ -52,10 +52,6 @@ export default async function AnnouncementPage({ params }: { params: { nisn: str
               <div className="col-span-2">
                 {student.placeOfBirth}, {student.dateOfBirth}
               </div>
-            </div>
-            <div className="grid grid-cols-3 p-4">
-              <div className="font-semibold text-blue-800">Alamat</div>
-              <div className="col-span-2">{student.address}</div>
             </div>
           </div>
         </div>

@@ -63,7 +63,7 @@ export default function CountdownTimer({ targetDate, onComplete }: CountdownTime
         transition={{ duration: 0.6 }}
         className="mb-8"
       >
-        <h1 className="mb-3 text-3xl font-bold text-blue-700">🎓 Pengumuman Kelulusan SMAN 10 BEKASI Tahun 2025 🎓</h1>
+        <h1 className="mb-3 text-3xl font-bold text-blue-700">🎓 Pengumuman Kelulusan SMAN 10 BEKASI Tahun 2026 🎓</h1>
         <p className="text-lg text-gray-700">Hasil kelulusan akan tersedia dalam:</p>
       </motion.div>
 
@@ -92,7 +92,7 @@ export default function CountdownTimer({ targetDate, onComplete }: CountdownTime
       </motion.div>
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} className="text-gray-600">
-        Silahkan kembali pada tanggal 5 Mei 2025 pukul 16:00 WIB untuk melihat hasil kelulusan.
+        Silahkan kembali pada tanggal 5 Mei 2026 pukul 16:00 WIB untuk melihat hasil kelulusan.
       </motion.p>
     </div>
   )

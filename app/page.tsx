@@ -12,8 +12,8 @@ export default function Home() {
   const [showCountdown, setShowCountdown] = useState(true)
   const [loading, setLoading] = useState(true)
 
-  // Announcement date and time (May 5, 2025, 16:00 WIB)
-  const announcementDate = new Date("2025-05-05T16:00:00+07:00")
+  // Announcement date and time (May 4, 2026, 14:00 WIB)
+  const announcementDate = new Date("2026-05-04T14:00:00+07:00")
 
   // Secret bypass code
   const BYPASS_CODE = "020202"
